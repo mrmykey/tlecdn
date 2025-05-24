@@ -28,5 +28,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "auto update" || echo "No changes to commit"
+          git commit -m "auto update: - $(date -u '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push
