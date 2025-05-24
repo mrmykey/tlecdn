@@ -1,4 +1,4 @@
-# TLE-CDN
+# TLE CDN
 
 The response time from [CelesTrak](https://celestrak.org/NORAD/elements/) can sometimes be slow. 
 This repository caches the latest TLE (Two-Line Element) files from CelesTrak and **updates them hourly** 
