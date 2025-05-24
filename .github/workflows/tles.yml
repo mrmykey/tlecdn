@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Run a multi-line script
         run: |
           curl -L -o last-30-days.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
