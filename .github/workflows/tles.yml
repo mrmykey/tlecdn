@@ -17,12 +17,16 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          curl -L -o last-30-days.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
+          curl -L -o last-30-days.txt   "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
+          curl -L -o space-stations.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"
+          curl -L -o 100-brightest.txt  "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle"
+          curl -L -o active.txt         "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle"
+          curl -L -o analyst.txt        "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle"
           
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Auto-update files - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
+          git commit -m "auto update" || echo "No changes to commit"
           git push
