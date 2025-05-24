@@ -1,0 +1,26 @@
+name: download tles
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+  workflow_dispatch:
+
+jobs:
+  download-tles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a multi-line script
+        run: |
+          curl -L -o last-30-days.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Auto-update files - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
+          git push
