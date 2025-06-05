@@ -1,3 +1,5 @@
+[![download tles](https://github.com/mrmykey/tlecdn/actions/workflows/tles.yml/badge.svg?branch=main)](https://github.com/mrmykey/tlecdn/actions/workflows/tles.yml)
+
 # TLE CDN
 
 The response time from [CelesTrak](https://celestrak.org/NORAD/elements/) can sometimes be slow. 
