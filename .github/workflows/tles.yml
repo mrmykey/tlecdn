@@ -23,6 +23,7 @@ jobs:
           curl -L -o 100-brightest.txt  "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle"
           curl -L -o active.txt         "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle"
           curl -L -o analyst.txt        "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle"
+          curl -L -o eop.txt            "https://celestrak.org/SpaceData/EOP-Last5Years.txt"
           
       - name: Commit and push changes
         run: |
