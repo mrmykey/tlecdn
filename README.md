@@ -17,4 +17,4 @@ The following TLE datasets are retrieved from CelesTrak and cached in this repos
 | [space-stations.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle)         | [space-stations.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/space-stations.txt) |
 | [100-brightest.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle)            | [100-brightest.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)   |
 | [analyst.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle)                 | [analyst.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)               |
-
+| [eop.txt](https://celestrak.org/SpaceData/EOP-Last5Years.txt)                                       | [eop.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/eop.txt)                       |
