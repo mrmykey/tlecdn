@@ -12,26 +12,26 @@ The following TLE, OMM KVN, EOP datasets are retrieved from CelesTrak and cached
 
 ### TLE
 
-| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
-|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [active.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle)                           | [active.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active.txt)                         |
-| [last-30-days.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle)               | [last-30-days.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days.txt)             |
-| [space-stations.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle)                 | [space-stations.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/space-stations.txt)         |
-| [100-brightest.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle)                    | [100-brightest.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)           |
-| [analyst.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle)                         | [analyst.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)                       |
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| [active.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle)                           | [active.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active.txt)                                 |
+| [last-30-days.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle)               | [last-30-days.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days.txt)                     |
+| [space-stations.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle)                 | [space-stations.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/space-stations.txt)                 |
+| [100-brightest.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle)                    | [100-brightest.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)                   |
+| [analyst.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle)                         | [analyst.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)                               |
 
 ### OMM KVN
 
-| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
-|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [active-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=kvn)                   | [active-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active.txt)                 |
-| [last-30-days-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=kvn)       | [last-30-days-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days.txt)     |
-| [space-stations-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=kvn)         | [space-stations-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/space-stations.txt) |
-| [100-brightest-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=kvn)            | [100-brightest-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)   |
-| [analyst-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=kvn)                 | [analyst-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)               |
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| [active-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=kvn)                   | [active-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active-omm-kvn.txt)                 |
+| [last-30-days-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=kvn)       | [last-30-days-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days-omm-kvn.txt)     |
+| [space-stations-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=kvn)         | [space-stations-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/space-stations-omm-kvn.txt) |
+| [100-brightest-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=kvn)            | [100-brightest-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest-omm-kvn.txt)   |
+| [analyst-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=kvn)                 | [analyst-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst-omm-kvn.txt)               |
 
 ### EOP
 
-| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
-|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [eop.txt](https://celestrak.org/SpaceData/EOP-Last5Years.txt)                                               | [eop.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/eop.txt)                               |
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| [eop.txt](https://celestrak.org/SpaceData/EOP-Last5Years.txt)                                               | [eop.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/eop.txt)                                       |
