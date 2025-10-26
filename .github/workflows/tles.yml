@@ -9,7 +9,7 @@ on:
 jobs:
   download-tles:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 7
 
     steps:
       - uses: actions/checkout@v4
@@ -18,12 +18,17 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          curl -L -o last-30-days.txt   "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
-          curl -L -o space-stations.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"
-          curl -L -o 100-brightest.txt  "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle"
-          curl -L -o active.txt         "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle"
-          curl -L -o analyst.txt        "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle"
-          curl -L -o eop.txt            "https://celestrak.org/SpaceData/EOP-Last5Years.txt"
+          curl -L -o last-30-days.txt           "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle"
+          curl -L -o space-stations.txt         "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"
+          curl -L -o 100-brightest.txt          "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle"
+          curl -L -o active.txt                 "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle"
+          curl -L -o analyst.txt                "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle"
+          curl -L -o last-30-days-omm-kvn.txt   "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=kvn"
+          curl -L -o space-stations-omm-kvn.txt "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=kvn"
+          curl -L -o 100-brightest-omm-kvn.txt  "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=kvn"
+          curl -L -o active-omm-kvn.txt         "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=kvn"
+          curl -L -o analyst-omm-kvn.txt        "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=kvn"
+          curl -L -o eop.txt                    "https://celestrak.org/SpaceData/EOP-Last5Years.txt"
           
       - name: Commit and push changes
         run: |
