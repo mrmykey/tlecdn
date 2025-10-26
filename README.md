@@ -10,7 +10,9 @@ to improve access speed.
 
 The following TLE, OMM KVN, EOP datasets are retrieved from CelesTrak and cached in this repository:
 
-| CelesTrak TLE ource                                                                                         | Cached TLE Destination                                                                                            |
+### TLE
+
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | [active.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle)                           | [active.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active.txt)                         |
 | [last-30-days.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle)               | [last-30-days.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days.txt)             |
@@ -18,8 +20,9 @@ The following TLE, OMM KVN, EOP datasets are retrieved from CelesTrak and cached
 | [100-brightest.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle)                    | [100-brightest.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)           |
 | [analyst.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle)                         | [analyst.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)                       |
 
+### OMM KVN
 
-| CelesTrak OMM KVN Source                                                                                    | Cached OMM KVN Destination                                                                                        |
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | [active-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=kvn)                   | [active-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/active.txt)                 |
 | [last-30-days-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=kvn)       | [last-30-days-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/last-30-days.txt)     |
@@ -27,7 +30,8 @@ The following TLE, OMM KVN, EOP datasets are retrieved from CelesTrak and cached
 | [100-brightest-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=kvn)            | [100-brightest-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/100-brightest.txt)   |
 | [analyst-omm-kvn.txt](https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=kvn)                 | [analyst-omm-kvn.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/analyst.txt)               |
 
+### EOP
 
-| CelesTrak EOP Source                                                                                        | Cached EOP Destination                                                                                            |
+| CelesTrak Source                                                                                            | Cached Destination                                                                                                |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | [eop.txt](https://celestrak.org/SpaceData/EOP-Last5Years.txt)                                               | [eop.txt](https://raw.githubusercontent.com/mrmykey/tlecdn/refs/heads/main/eop.txt)                               |
