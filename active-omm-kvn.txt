@@ -1,3 +1,0 @@
-GP data has not updated since your last successful
-download of GROUP=active at 2026-05-23 17:00:49 UTC.
-Data is updated once every 2 hours.
