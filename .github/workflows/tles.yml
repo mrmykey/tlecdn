@@ -1,0 +1,70 @@
+name: download tles
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  download-tles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Download TLEs from CelesTrak
+        run: |
+          fetch() {
+            local url="$1"
+            local out="$2"
+            curl -f -L -o "$out" "$url" || echo "WARNING: failed to download $out from $url"
+          }
+
+          fetch "https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle" last-30-days.txt
+          fetch "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle"     space-stations.txt
+          fetch "https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle"       100-brightest.txt
+          fetch "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle"       active.txt
+          fetch "https://celestrak.org/NORAD/elements/gp.php?GROUP=analyst&FORMAT=tle"      analyst.txt
+          fetch "https://celestrak.org/SpaceData/EOP-Last5Years.txt"                        eop.txt
+
+      - name: Download KVN and JSON from Space-Track
+        env:
+          SPACETRACK_USER: ${{ secrets.SPACETRACK_USER }}
+          SPACETRACK_PASS: ${{ secrets.SPACETRACK_PASS }}
+        run: |
+          fetch() {
+            local url="$1"
+            local out="$2"
+            curl -b cookies.txt -f -L -o "$out" "$url" || echo "WARNING: failed to download $out from $url"
+          }
+
+          curl -c cookies.txt -b cookies.txt \
+               "https://www.space-track.org/ajaxauth/login" \
+               --data-urlencode "identity=$SPACETRACK_USER" \
+               --data-urlencode "password=$SPACETRACK_PASS" \
+               --silent --fail \
+            || { echo "WARNING: Space-Track login failed, skipping KVN/JSON downloads"; exit 0; }
+
+          fetch "https://www.space-track.org/basicspacedata/query/class/gp/decay_date/null-val/epoch/%3Enow-10/format/kvn"  active-omm.kvn
+          fetch "https://www.space-track.org/basicspacedata/query/class/gp/decay_date/null-val/epoch/%3Enow-10/format/json" active-omm.json
+
+          rm -f cookies.txt
+
+      - name: Commit and push (single-commit history)
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "no changes to commit"
+            exit 0
+          fi
+
+          # Squash entire history into one commit — repo stays flat forever
+          git reset "$(git rev-list --max-parents=0 HEAD)"
+          git add -A
+          git commit --amend -m "TLE cache: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          git push --force
